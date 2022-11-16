@@ -13,7 +13,8 @@ const { series, parallel, src, dest, lastRun, watch } = require('gulp'),
   svgSprite = require('gulp-svg-sprite'),
   svgmin = require('gulp-svgmin'),
   cheerio = require('gulp-cheerio'),
-  replace = require('gulp-replace');
+  replace = require('gulp-replace'),
+  ghPages = require('gulp-gh-pages');
 
 ///////////////////////////////////////////////////////// path
 const path = {
@@ -199,6 +200,11 @@ const watcher = () => {
   watch(path.src.scriptLib, jsLib);
 }
 
+const deploy = () => {
+  return src('./dist/**/*')
+    .pipe(ghPages());
+}
+
 ///////////////////////////////////////////////////////// task
 exports.default = series(
   clean,
@@ -231,3 +237,5 @@ exports.build = series(
     jsBuild
   )
 );
+
+exports.deploy = deploy;
