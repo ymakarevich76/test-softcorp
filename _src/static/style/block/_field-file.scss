@@ -1,0 +1,57 @@
+.field-file {
+  $self: &;
+
+  position: relative;
+
+  &__file {
+    @extend .visually-hidden;
+  }
+
+  &__label {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 10px;
+    background: #FFFFFF;
+    border: 2px solid $c-accent;
+    border-radius: 3px;
+    transition: 0.3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    &:hover {
+      background-color: $c-accent;
+    }
+
+    svg {
+      width: 17px;
+      height: 20px;
+      fill: #272733;
+    }
+
+    &:hover svg {
+      fill: $c-secondary;
+    }
+  }
+
+
+  &__text {
+    margin-left: 10px;
+    position: relative;
+    font-family: $ff-main;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #272733;
+
+    #{$self}__label:hover & {
+      color: $c-secondary;
+    }
+  }
+}

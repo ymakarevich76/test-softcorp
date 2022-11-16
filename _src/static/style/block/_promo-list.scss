@@ -1,0 +1,26 @@
+.promo-list {
+  @extend .list-reset;
+
+  &__item {
+    font-family: $ff-main;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $c-main;
+    position: relative;
+    padding-left: 10px;
+
+    @media (max-width: $sm) {
+      font-size: $fz-main;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &::before {
+      content: '-';
+      margin-right: 10px;
+    }
+  }
+}

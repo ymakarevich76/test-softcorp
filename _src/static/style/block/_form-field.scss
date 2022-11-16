@@ -1,0 +1,30 @@
+.form-field {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid $c-secondary;
+  border-radius: 3px;
+  outline: none;
+  font-family: $ff-main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #272733;
+
+  &::placeholder {
+    color: #272733;
+  }
+
+  &:focus {
+    background: rgba(61, 64, 80, 0.85);
+    border-color: rgba(61, 64, 80, 0.85);
+    color: $c-secondary;
+
+    &::placeholder {
+      color: $c-secondary;
+    }
+  }
+}

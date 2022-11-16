@@ -1,0 +1,54 @@
+.ordering-step {
+  width: calc(100% / 5 - 30px);
+  margin: 0 15px;
+
+  @media (max-width: $lg) {
+    width: calc(100% / 3 - 30px);
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $md) {
+    width: calc(100% / 2 - 30px);
+    margin-bottom: 30px;
+  }
+
+  &__circle {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    background: #3E9CDC;
+    border: 5px solid #286690;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $sm) {
+      width: 80px;
+      height: 80px;
+    }
+
+    svg {
+      width: 55px;
+      height: 55px;
+      fill: $c-secondary;
+
+      @media (max-width: $sm) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  &__text {
+    font-family: $ff-main;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fz-main;
+    text-align: center;
+    color: $c-secondary;
+
+    @media (max-width: $sm) {
+      font-size: 12px;
+    }
+  }
+}
