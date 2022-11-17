@@ -18,6 +18,10 @@
     color: #272733;
   }
 
+  &::-moz-placeholder {
+    opacity: 1;
+  }
+
   &:focus {
     background: rgba(61, 64, 80, 0.85);
     border-color: rgba(61, 64, 80, 0.85);
